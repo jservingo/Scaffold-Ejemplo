@@ -10,7 +10,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -42,7 +45,7 @@ class MainActivity : ComponentActivity() {
 fun ScaffoldEjemplo() {
     Scaffold(
         topBar = {
-            TopAppBar(
+            CenterAlignedTopAppBar(
                 title = {
                     Text(text="Mi aplicacion")
                 },
@@ -58,11 +61,20 @@ fun ScaffoldEjemplo() {
                 },
                 actions = {
                     IconButton(
-                        onClick = { /* Accion de busqueda */ },
+                        onClick = { /* Accion */ },
                     ) {
                         Icon(
-                            imageVector = Icons.Default.Search,
-                            contentDescription = "Buscar"
+                            imageVector = Icons.Default.Notifications,
+                            contentDescription = "Notificaciones"
+                        )
+                    }
+
+                    IconButton(
+                        onClick = { /* Accion */ },
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Settings,
+                            contentDescription = "Configuración"
                         )
                     }
                 },
